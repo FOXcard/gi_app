@@ -1,0 +1,11 @@
+.center-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: red;
+}
+
+.image{
+    max-width: 500px;
+    max-height: 500px;
+}
