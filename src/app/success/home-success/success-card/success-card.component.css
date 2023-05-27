@@ -1,0 +1,228 @@
+.overrides .nav-link.active {
+    background-color: none;
+  }
+  body{
+  background-color:#283033;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+    overflow-y: scroll;
+  position: relative;
+  }
+  a{
+  color:#fce083;
+  text-decoration: none;
+  }
+  a:hover{
+  color:#ffefdc;
+  text-decoration: none;
+  }
+  
+  div::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  div::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 239, 220, 0.3);
+    border-radius: 20px;
+  }
+  div::-webkit-scrollbar-track {
+    background: #181d20;
+  }
+  .top_all{
+  background-color: #181d20;
+  text-align:center;
+  padding:15px 0;
+  margin-bottom:0;
+  }
+  h1.title_page_name {
+  font-size: 40px;
+  color:#ffefdc;
+  font-weight:bold;
+  }
+  .wrapper_top{
+  display:flex;
+  justify-content: center;
+  }
+  .wrapper_top div{
+  margin: 0 15px;
+  background-color:#4b5355;
+  padding:5px;
+  text-align:center;
+  font-size:18px;
+  color:#ffffff;
+  min-width: 200px;
+  border-radius:10px;
+  }
+  .et_pb_image_wrap {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+  }
+  .wrapper_page_achievement{
+  display:grid;
+  grid-template-columns: 1fr 3fr;	
+  }
+  @media screen and (max-width: 1400px) {
+  .wrapper_page_achievement {
+    grid-template-columns: 1fr;
+  }
+  }
+  .flex{
+  display:flex;
+  }
+  .left_categories, .right_content{
+  color:#ffffff;
+  }
+  .left_categories{
+  padding: 30px 15px;
+  background-color:#252c2f;
+  height: calc(100vh - 130px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  }
+  .category, .wrapper_content{
+  background-color:#181d20;
+  border-radius: 10px;
+  margin: 5px 0;
+  padding:5px 20px;
+  }
+  .category{
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  text-align:center;
+  vertical-align: middle;
+  cursor: pointer;
+  }
+  .category p{
+  color:#ffefdc;
+  margin:5px 0;
+  font-weight: 800;
+  font-size: 17px;
+  }
+  .category .col-6 p{
+  color:#ffffff;
+  font-weight: lighter;
+  font-size:14px;
+  }
+  .right_content{
+  margin: 0 0 0 20px;
+  }
+  .form-control{
+  font-size: 12px;
+  color:#ffffff;
+    background-color: #181d20;
+    border: 1px solid #181d20;
+  font-family: 'Montserrat', sans-serif;
+  }
+  .btn{
+  color:#ffffff;
+  font-size:12px;
+  font-weight: 500;
+  background-color: #4b5355;
+  border: 1px solid #4b5355;
+  font-family: 'Montserrat', sans-serif;
+  }
+  .toolbar p, .form-check-label{
+  padding: 5.5px 10px 0 20px;
+    vertical-align: middle;
+    margin: 0 0;
+    font-size: 14px;
+  }
+  .dropdown-menu{
+  background-color: #4b5355;
+  border: 1px solid #4b5355;
+  min-width:70px;
+  }
+  .dropdown-item{
+  padding: 2px 15px;
+  color:#ffffff;
+  font-size:14px;
+  }
+  .form-check-input{
+  margin: 7px 0 0 0;
+  }
+  .content{
+  display:none;
+  margin: 30px 0 0 0;
+  }
+  .content h3{
+  background-image: url("https://www.genshin-impact.fr/wp-content/uploads/2022/10/UI_NameCardPic_Ysxf2_Alpha.png");
+  background-color: #181d20;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center right -10%;
+  border-radius: 10px;
+  padding: 8px 0 8px 20px;
+  font-size: 30px;
+  font-weight: 600;
+    box-shadow: -3px 0 4px 0 rgb(0 0 0 / 80%);
+  }
+  .wrapper_content{
+  display:grid;
+  grid-template-columns: 10fr 1fr;
+  padding:10px 20px 5px 20px;	
+  box-shadow: -3px 0 2px 0 rgb(0 0 0 / 80%);
+  }
+  .wrapper_content h4{
+  color: #ffefdc;
+    margin: 0;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  .wrapper_content p{
+    font-size: 14px;
+  margin:0;
+  }
+  .tags{
+  margin: 10px 0 5px 0;
+  }
+  .tag{
+  background-color:#4b5355;
+  font-size:12px;
+  padding: 2px 8px;
+    border-radius: 10px;
+    margin: 0 5px 0 0;
+  }
+  .guide{
+  background-color:#0e1112;
+  padding:10px;
+  margin: 5px;
+  border-radius: 10px;
+  width:70%;
+  margin:10px 0 5px 0;
+  }
+  .guide p{
+  font-weight:600;
+  }
+  .guide a{
+  font-weight: lighter;
+  }
+  .accordeon{
+  top: 50%;
+    left: 40%;
+    position: relative;
+    background: none;
+    color: #fff;
+    font-size: 12px;
+    border-width: 0px;
+  padding:2px 5px;
+  border-radius:5px;
+  }
+  .accordeon:hover{
+  background-color: #181d20;
+  }
+  .accordeon_content{
+  display:none;
+  padding:5px;
+  font-size:12px;
+  }
+  .accordeon_content ul{
+  margin:0;
+  }
+  .wrapper_content_right{
+  margin: 10px 0 0 0;
+  }
+  .wrapper_content_right p{
+  font-weight:600;
+  font-size:18px;
+  }
+  

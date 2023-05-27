@@ -1,0 +1,27 @@
+.top_all {
+  background-color: #181d20;
+  text-align: center;
+  padding: 15px 0;
+  margin-bottom: 0;
+}
+
+h1.title_page_name {
+  font-size: 40px;
+  color: #ffefdc;
+  font-weight: bold;
+}
+
+.wrapper_top {
+  display: flex;
+  justify-content: center;
+}
+.wrapper_top div {
+  margin: 0 15px;
+  background-color: #4b5355;
+  padding: 5px;
+  text-align: center;
+  font-size: 18px;
+  color: #ffffff;
+  min-width: 200px;
+  border-radius: 10px;
+}

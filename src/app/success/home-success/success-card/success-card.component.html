@@ -1,0 +1,48 @@
+<li  style="list-style-type:none">
+    <div class="wrapper_content">
+        <div class="wrapper_content_left">
+          <h4> test.name </h4>
+          <div  class="tags">
+            <div>
+              <div class="tag"> tag </div>
+            </div>
+        </div>
+        <div >
+        <div v-for="detail in test.detail" style="list-style-type:none" class="wrapper_content">
+          <div class="tags" >
+          <input type="checkbox" id="checkbox">
+          <p>detail.dsc_detail</p>
+          <p>detail.nbrp </p>
+        </div>
+        </div>
+      </div>
+          <div  class="guide">
+            <p>Guide : <a :href="test.guide.link" target="_blank">test.guide.name<svg
+                  viewBox="0 0 24 24"
+                  style=" width:1.0499999999999998rem; height:1.0499999999999998rem; fill:currentColor;"
+                  class=" svelte-1mzwbk9">
+                  <path
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z">
+                  </path>
+                </svg></a></p>
+            <button class="accordeon" >
+              voir plus
+            </button>
+            <div id="accordeon_succes1" class="accordeon_content">
+              livre 1
+              livre 2
+              livre 3
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="wrapper_content_right">
+          <p>5 <img src="https://www.genshin-impact.fr/wp-content/uploads/2022/09/UI_ItemIcon_201.png"
+              style="height:20px;" /></p>
+        </div>
+
+
+      </div>
+      </li>
