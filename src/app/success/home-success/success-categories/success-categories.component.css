@@ -4,7 +4,6 @@
     .left_categories{
     padding: 30px 15px;
     background-color:#252c2f;
-    height: calc(100vh - 130px);
     overflow-y: auto;
     overflow-x: hidden;
     }

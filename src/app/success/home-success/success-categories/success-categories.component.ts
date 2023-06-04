@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Group } from '../../api.service';
 
 @Component({
   selector: 'app-success-categories',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./success-categories.component.css']
 })
 export class SuccessCategoriesComponent {
+  @Input() group = new Group('','')
+  @Output() displayGroup = new EventEmitter<string>();
 
+  selectGroup(){
+    this.displayGroup.emit(this.group.id.toString())
+  }
 }

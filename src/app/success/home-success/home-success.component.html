@@ -1,17 +1,19 @@
 <div>
-    <div class="top_all">
-        <app-header>
-
-        </app-header>
+  <div class="top_all">
+    <app-header> </app-header>
+  </div>
+  <div class="container">
+    <div class="wrapper_page_achievement">
+      <div>
+        <div *ngFor="let grp of group; index as i">
+      <app-success-categories [group]="grp" (displayGroup)="displayGroup($event)">
+      </app-success-categories>
     </div>
-    <div class="container">
-      <div class="wrapper_page_achievement">
-            <app-success-categories>
-
-            </app-success-categories>
-        <div>
-            <app-success-card></app-success-card>
-        </div>
-      </div>
+    </div>
+    <div>
+      <app-success-card></app-success-card>
+      <button (click)="getInfo()">getInfo</button>
+    </div>
+    </div>
     </div>
   </div>
