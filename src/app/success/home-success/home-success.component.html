@@ -1,4 +1,4 @@
-<div>
+<div style="background-color:#283033;">
   <div class="top_all">
     <app-header> </app-header>
   </div>
@@ -6,14 +6,19 @@
     <div class="wrapper_page_achievement">
       <div>
         <div *ngFor="let grp of group; index as i">
-      <app-success-categories [group]="grp" (displayGroup)="displayGroup($event)">
-      </app-success-categories>
-    </div>
-    </div>
-    <div>
-      <app-success-card></app-success-card>
-      <button (click)="getInfo()">getInfo</button>
-    </div>
-    </div>
+          <app-success-categories
+            [group]="grp"
+            (displayGroup)="displayGroup($event)"
+          >
+          </app-success-categories>
+        </div>
+      </div>
+      <div>
+        <button style="height: 120px; width: 500px;"   (click)="getInfo()">getInfo</button>
+        <div *ngFor="let s of success; index as i">
+          <app-success-card [success]="s"></app-success-card>
+        </div>
+      </div>
     </div>
   </div>
+</div>

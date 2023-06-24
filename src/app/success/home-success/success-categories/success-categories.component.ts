@@ -11,6 +11,7 @@ export class SuccessCategoriesComponent {
   @Output() displayGroup = new EventEmitter<string>();
 
   selectGroup(){
+    console.log(this.group)
     this.displayGroup.emit(this.group.id.toString())
   }
 }

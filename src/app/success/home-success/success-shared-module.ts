@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeSuccessComponent } from './home-success.component';
 import { SuccessCardComponent } from './success-card/success-card.component';
 import { SuccessCategoriesComponent } from './success-categories/success-categories.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
     declarations: [
@@ -13,7 +14,8 @@ import { SuccessCategoriesComponent } from './success-categories/success-categor
         SuccessCategoriesComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        MatCheckboxModule
     ],
     exports: [
         HomeSuccessComponent

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService, Group } from '../api.service';
+import { ApiService, Group, Success } from '../api.service';
 import { HttpHeaders } from '@angular/common/http';
 
 @Component({
@@ -10,7 +10,9 @@ import { HttpHeaders } from '@angular/common/http';
 export class HomeSuccessComponent implements OnInit{
 
   corsHeaders : HttpHeaders;
-   group : Group[] = [];
+  group : Group[] = [];
+  success : Success[] = [];
+  SuccessToDiplay: Success[] = [];
  constructor(private apiService : ApiService){
   this.corsHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
@@ -21,16 +23,20 @@ export class HomeSuccessComponent implements OnInit{
       var groupData : Group[]  = data.data;
       this.group = groupData
       for (var i = 0; i < groupData.length; i++) {
-        console.log(groupData[i])
+        //console.log(groupData[i])
       };
     });
+    this.apiService.getAllSuccess();
   }
 
   displayGroup(event : string){
-    console.log(event)
+    this.SuccessToDiplay = this.apiService.getListSuccessFromGlobalGet(event);
+    this.success = this.SuccessToDiplay;
+    console.log(this.SuccessToDiplay);
   }
 
   getInfo(){
-    this.apiService.getSuccessData();
+    this.success = this.apiService.dataSuccess;
+    //this.apiService.getAllSuccess();
   }
 }

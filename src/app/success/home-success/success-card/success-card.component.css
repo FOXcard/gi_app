@@ -1,4 +1,68 @@
-.overrides .nav-link.active {
+ .card{
+  margin: 0 15px;
+  background-color:#181d20;
+  padding:5px;
+  font-size:18px;
+  color:#ffffff;
+  min-width: 200px;
+  border-radius:10px;
+  display: grid;
+  grid-template-columns: 100%;
+  }
+.card_title{
+  margin-left: 10%;
+  text-align: left;
+}
+.top_card{
+display: grid;
+align-items: right;
+grid-template-columns: auto 20%;
+}
+
+.primo{
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 20% 20%;
+}
+.tags{
+  display: flex;
+  padding: 12px 15%;
+}
+.tag {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+  background-color: #4a5254;
+  width: fit-content;
+  margin: 0px 18px;
+  padding: 2px 18px;
+  border-radius: 18px;
+}
+
+.guide {
+  background-color: #0e1112;
+  margin: 5px 10%;
+}
+
+/* On mouse-over, add a deeper shadow */
+/*.tag:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+*/
+
+h4{
+  color: #ffefdc;
+    margin: 0;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  p{
+    font-size: 16px;
+  margin:0;
+  }
+
+
+/* .overrides .nav-link.active {
     background-color: none;
   }
   body{
@@ -225,4 +289,4 @@
   font-weight:600;
   font-size:18px;
   }
-  
+   */

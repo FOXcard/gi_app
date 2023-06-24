@@ -1,7 +1,24 @@
-<li  style="list-style-type:none">
-    <div class="wrapper_content">
+<div class="card">
+  <div class="top_card" (click)="change()">
+  <h4 class="card_title">{{this.success.name}}</h4>
+  <div class="primo">
+  <p style="text-align: right;">{{success.primogems}}</p><img src="https://www.genshin-impact.fr/wp-content/uploads/2022/09/UI_ItemIcon_201.png"
+  style="height:20px;"/>
+  <mat-checkbox [checked]="success.check" (change)="toggleSelection($event)"></mat-checkbox></div>
+</div>
+  <p style="margin-left: 10%;">{{success.description}}</p>
+  <div class="tags">
+    <div class="tag">{{success.version}}</div>
+    <div class="tag">alpha</div>
+    <div class="tag">test</div>
+  </div>
+  <div class="guide">
+    <div>Guide : <div>{{success.guide}}</div></div>
+  </div>
+</div>
+<!--    <div class="wrapper_content">
         <div class="wrapper_content_left">
-          <h4> test.name </h4>
+          <h4>{{this.success.name}}</h4>
           <div  class="tags">
             <div>
               <div class="tag"> tag </div>
@@ -12,12 +29,12 @@
           <div class="tags" >
           <input type="checkbox" id="checkbox">
           <p>detail.dsc_detail</p>
-          <p>detail.nbrp </p>
+          <p>{{success.primogems}}</p>
         </div>
         </div>
       </div>
           <div  class="guide">
-            <p>Guide : <a :href="test.guide.link" target="_blank">test.guide.name<svg
+            <p>Guide : <a :href="test.guide.link" target="_blank">{{success.description}}<svg
                   viewBox="0 0 24 24"
                   style=" width:1.0499999999999998rem; height:1.0499999999999998rem; fill:currentColor;"
                   class=" svelte-1mzwbk9">
@@ -43,6 +60,6 @@
               style="height:20px;" /></p>
         </div>
 
-
+        <button style="height: 120px; width: 500px;"   (click)="getInfo()">getInfo</button>
       </div>
-      </li>
+-->
