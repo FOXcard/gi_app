@@ -39,4 +39,8 @@ export class HomeSuccessComponent implements OnInit{
     this.success = this.apiService.dataSuccess;
     //this.apiService.getAllSuccess();
   }
+
+  isEmpty(){
+    return this.success.length <1
+  }
 }

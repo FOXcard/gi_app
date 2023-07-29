@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Group } from '../../api.service';
+import { SelectControlValueAccessor } from '@angular/forms';
+
 
 @Component({
   selector: 'app-success-categories',
@@ -13,5 +15,6 @@ export class SuccessCategoriesComponent {
   selectGroup(){
     console.log(this.group)
     this.displayGroup.emit(this.group.id.toString())
+    
   }
 }

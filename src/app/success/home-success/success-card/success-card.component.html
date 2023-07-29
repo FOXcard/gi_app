@@ -1,16 +1,17 @@
 <div class="card">
-  <div class="top_card" (click)="change()">
-  <h4 class="card_title">{{this.success.name}}</h4>
+  <div class="top_card" >
+  <h4 class="card_title" (click)="change()">{{this.success.name}}</h4>
   <div class="primo">
   <p style="text-align: right;">{{success.primogems}}</p><img src="https://www.genshin-impact.fr/wp-content/uploads/2022/09/UI_ItemIcon_201.png"
   style="height:20px;"/>
-  <mat-checkbox [checked]="success.check" (change)="toggleSelection($event)"></mat-checkbox></div>
+  <mat-checkbox [checked]="success.check" class="mat-headline-3" style="background-color: gray;"(change)="toggleSelection($event)"></mat-checkbox></div>
 </div>
   <p style="margin-left: 10%;">{{success.description}}</p>
-  <div class="tags">
+  <div class="tags" *ngIf="success.tags != undefined">  
     <div class="tag">{{success.version}}</div>
-    <div class="tag">alpha</div>
-    <div class="tag">test</div>
+    <div *ngFor="let t of success.tags; index as i">
+      <div class="tag">{{t.tags_id.name}}</div>
+    </div>
   </div>
   <div class="guide">
     <div>Guide : <div>{{success.guide}}</div></div>

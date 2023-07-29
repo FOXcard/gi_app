@@ -1,23 +1,29 @@
-<div style="background-color:#283033;">
+<div class="body" style="background-color: #283033">
   <div class="top_all">
     <app-header> </app-header>
   </div>
   <div class="container">
-    <div class="wrapper_page_achievement">
-      <div>
-        <div *ngFor="let grp of group; index as i">
-          <app-success-categories
-            [group]="grp"
-            (displayGroup)="displayGroup($event)"
-          >
-          </app-success-categories>
-        </div>
+    <div class="groupColumn">
+      <div *ngFor="let grp of group; index as i">
+        <app-success-categories
+          [group]="grp"
+          (displayGroup)="displayGroup($event)"
+        >
+        </app-success-categories>
+      </div>
+    </div>
+    <div class="successColumn">
+      <div *ngFor="let s of success; index as i">
+        <app-success-card style="padding: 2px" [success]="s"></app-success-card>
       </div>
       <div>
-        <button style="height: 120px; width: 500px;"   (click)="getInfo()">getInfo</button>
-        <div *ngFor="let s of success; index as i">
-          <app-success-card [success]="s"></app-success-card>
-        </div>
+      <div *ngIf="isEmpty()" class="pageWelcomeHome">
+        <div class="Yae-center">
+            <p>
+              Bienvenue sur l'outil pour trouver et sauvegarder vos succes !
+            </p>
+          <img class="image" src="./assets/yae.png" />
+        </div></div>
       </div>
     </div>
   </div>

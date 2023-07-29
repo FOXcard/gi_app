@@ -12,7 +12,7 @@ export class ApiService {
   }
 
   getInformationFromServer(){
-      return this.http.get<any>("https://gifr-success.alola.kazokukoneko.com/items/success?fields[]=*&fields[]=tags.tags_id.*&fields[]=steps.*&fields[]=steps.goals.*&fields[]=goals.*",{
+      return this.http.get<any>("https://gifr-success.alola.kazokukoneko.com/items/success?fields[]=*&fields[]=tags.tags_id.*&fields[]=steps.*&fields[]=steps.goals.*&fields[]=goals.*&limit=-1",{
         headers: new HttpHeaders({
           'Content-Type': 'application/json',
           'Accept': 'application/json'
@@ -96,8 +96,15 @@ export class Goal {
 }
 
 export class Tags {
-  private id: String;
-  private name : String;
+  tags_id : Tags_id
+  constructor(tags_id : Tags_id){
+    this.tags_id = tags_id;
+  }
+}
+
+export class Tags_id {
+   id: String;
+   name : String;
 
   constructor(id : String, name : String){
     this.id = id;

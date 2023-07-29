@@ -20,12 +20,20 @@ export class SuccessCardComponent {
 
   toggleSelection(checkbox : MatCheckboxChange){
     this.success.check = !this.success.check ;
-    console.log(this.success.check)
+    console.log("A")
   }
 
   change(){
     this.success.check = !this.success.check ;
-    console.log(this.success.check)
+    console.log("B")
   }
+
+  test(){
+    this.success.tags.forEach((tag) => {
+      console.log(tag)
+      console.log(tag.tags_id.name)
+    })
+  }
+
 
 }
